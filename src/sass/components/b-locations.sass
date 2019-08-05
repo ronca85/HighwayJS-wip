@@ -1,0 +1,130 @@
+.b-locations
+	position: relative
+	margin-bottom: 105px
+	margin-bottom: 8.20312vw
+
+	&__list
+		white-space: nowrap
+		will-change: transform
+		transition: transform 1s cubic-bezier(0.9, 0, 0.1, 1)
+	
+	&__item
+		display: inline-block
+		width: 61.92906%
+		margin-left: 6.34516%
+		transition: opacity 0.3s ease
+		&.active
+			.t-city
+				color: #202020
+			.t-address
+				color: #7b7b7b
+			.t-link
+				color: #171717
+			.t-map .t-link
+				color: #7b7b7b
+
+
+	&__infos
+		margin-top: 25px
+		margin-top: 1.95312vw
+		white-space: nowrap
+		will-change: transform
+		transition: transform 1s cubic-bezier(0.9, 0, 0.1, 1)
+
+	&__left
+		user-select: none
+		pointer-events: none
+		width: 59.01661%
+		margin-top: 40px
+		margin-top: 3.125vw
+		margin-bottom: 85px
+		margin-bottom: 6.64062vw
+
+	&__left,
+	&__right
+		display: inline-block
+		vertical-align: middle
+
+	&__right
+		z-index: 5
+		position: relative
+		width: 28.27907%
+		margin-left: 7.78737%
+		margin-top: -85px
+		margin-top: -6.64062vw
+
+	&__frame
+		user-select: none
+		overflow: hidden
+		position: relative
+		height: 0
+
+	&__img
+		user-select: none
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		display: block
+		&:after
+			transform: translate3d(100%, 0, 0)
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			display: block
+			width: 100%
+			height: 100%
+			background: #fff
+			transform: translate3d(0, 0, 0)
+			transition: transform 0.8s cubic-bezier(0.9, 0, 0.1, 1)
+
+	&__city
+		color: #c5c5c5
+		cursor: pointer
+		font-weight: bold
+		font-size: 180px
+		font-size: 14.0625vw
+		font-family: "antoni-web","Helvetica Neue",Helvetica,Arial,sans-serif
+		line-height: 180px
+		line-height: 14.0625vw
+		letter-spacing: -.25px
+		letter-spacing: -.01953vw
+		display: inline-block
+		white-space: nowrap
+		margin-left: -5px
+		margin-left: -.39062vw
+		transform: translate3d(-51.22924%, 0, 0)
+		transition: transform 0.8s cubic-bezier(0.9, 0, 0.1, 1),color 0.8s cubic-bezier(0.9, 0, 0.1, 1)
+	
+	&__address
+		font-size: 12px
+		font-size: 1.5625vw
+		line-height: 18px
+		line-height: 2.34375vw
+		@media screen and (min-width: 992px)
+			font-size: 14px
+			font-size: 1.09375vw
+			line-height: 24px
+			line-height: 1.875vw
+			color: rgba(74,74,74,0.3)
+			margin-top: 10px
+			margin-top: .78125vw
+			transition: color 0.8s cubic-bezier(0.9, 0, 0.1, 1)
+	
+	&__link
+		color: rgba(74,74,74,0.3)
+		text-decoration: none
+		font-size: 14px
+		font-size: 1.09375vw
+		line-height: 20px
+		line-height: 1.5625vw
+		transition: color 0.8s cubic-bezier(0.9, 0, 0.1, 1)
+	
+	&__map
+		line-height: 24px
+		line-height: 1.875vw
+
+		

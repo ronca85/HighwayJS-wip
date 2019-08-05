@@ -7,21 +7,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
+    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet" />
     <link rel="stylesheet" media="all" href="css/app.css" />
   </head>
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <ul class="nav">
-        <li><a href="index.html">Homepage</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-      <div id="container"></div>
+      <div class="c-nav">
+        <ul class="c-nav__list">
+          <li class="c-nav__list-item">
+            <a class="c-nav__link" href="index.html">Homepage</a>
+          </li>
+          <li class="c-nav__list-item">
+            <a class="c-nav__link" href="about.html">About</a>
+          </li>
+          <li class="c-nav__list-item">
+            <a class="c-nav__link" href="blog.html">Blog</a>
+          </li>
+          <li class="c-nav__list-item">
+            <a class="c-nav__link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div id="bg-transition">
+        <div class="a-test">
+          <h1 class="a-test__title">Test Title About</h1>
+        </div>
+      </div>
       <main data-router-wrapper>
-        <article data-router-view="about">
-          <h1>About</h1>
+        <article class="scrollable" data-router-view="about">
+          <span class="main-overlay" style="transform: translate(180%, 0%) translate3d(0px, 0px, 0px);"></span>
+          <header class="b-head">
+            <div class="b-head__background">
+              <div class="b-head__poster mobile" style="background: url('../img/mobile__about__head.jpg') center center no-repeat / cover;"></div>
+              <video class="no-mobile" poster="../img/desktop__about__head.jpg" preload="none" muted="muted" loop="loop" playsinline="playsinline" style="top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover;">
+                <source src="../video/about__head.webm" type="video/webm" />
+                <source src="../video/about__head.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <h1 class="b-head__title js-h-title">About</h1>
+          </header>
+          <section class="b-content container">
+            <div class="b-content__left">
+              <p class="b-content__text"> squishie was founded in 2023 exclusively for Mooshie Indursties. In 2027 squishie_lemons started as our next tailor-made agency, for the sweets brand Juicy Lucy. In 2029 we opened squishie_waterworks for Aquatic Group. The main idea of each squishie agency is focus. Because we believe that concentrating on one client leads to real transformation. Want to know more? We look forward to hearing from you. </p>
+            </div>
+            <div class="b-content__right">
+              <div class="b-content__frame">
+                <img class="b-content__img" src="../img/contact__section__content.jpg" alt="contact" />
+              </div>
+            </div>
+          </section>
+          <section class="b-locations">
+            <ul class="container">
+              <li class="b-locations__item active ">
+                <div class="b-locations__left">
+                  <div class="b-locations__frame shown">
+                    <img class="b-locations__img" src="https://antoni.de/wp-content/uploads/2017/08/berlin2-2.jpg" alt="Berlin" />
+                  </div>
+                </div>
+                <div class="b-locations__right">
+                  <h3 class="b-locations__city t-city">Berlin</h3>
+                  <address class="b-locations__address t-address">antoni Holding GmbH<br /> Münzstraße 13 <br /> 10178 Berlin</address>
+                  <ul class="b-locations__infos">
+                    <li class="b-locations__info">
+                      <a class="b-locations__link t-link" href="tel:%2B49%2030%20848596-0" target="_self">Tel: +49 30 848596-0</a>
+                    </li>
+                    <li class="b-locations__info">
+                      <a class="b-locations__link t-link" href="tel:%2B49%2030%20848596-501" target="_self">Fax: +49 30 848596-501</a>
+                    </li>
+                    <li class="b-locations__info">
+                      <a class="b-locations__link t-link" href="mailto:hello@antoni.de" target="_self">E-mail: hello@antoni.de</a>
+                    </li>
+                    <li class="b-locations__map t-map">
+                      <a class="b-locations__link t-link" href="https://www.google.com/maps?q=antoni+Berlin+GmbH+%26+Co.+KG+vertreten+durch+die+Komplement%C3%A4rin+antoni+Verwaltungs+GmbH+Sitz:+Berlin+M%C3%BCnzstra%C3%9Fe+13+10178+Berlin&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ved=0ahUKEwjVvf3r7oPWAhXLiRoKHW9BD44Q_AUICigB" target="_blank">map</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="b-locations__item img-right">
+                <div class="b-locations__right">
+                  <div class="b-locations__city-container">
+                    <h3 class="b-locations__city t-city">Stuttgart</h3>
+                  </div>
+                  <address class="b-locations__address t-address">antoni Stuttgart<br /> Alte Poststraße 3<br /> 70173 Stuttgart</address>
+                  <ul class="b-locations__infos">
+                    <li class="b-locations__info">
+                      <a class="b-locations__link t-link" href="tel:%2B49%2030%20848596-0" target="_self">Tel: +49 30 848596-0</a>
+                    </li>
+                    <li class="b-locations__info">
+                      <a class="b-locations__link t-link" href="tel:%2B49%2030%20848596-501" target="_self">Fax: +49 30 848596-501</a>
+                    </li>
+                    <li class="b-locations__info">
+                      <a class="b-locations__link t-link" href="mailto:hello@antoni.de" target="_self">E-mail: hello@antoni.de</a>
+                    </li>
+                    <li class="b-locations__map t-map">
+                      <a class="b-locations__link t-link" href="https://www.google.com/maps/place/Alte+Poststra%C3%9Fe+3,+70173+Stuttgart,+Deutschland/@48.7745353,9.1718383,17z/data=!3m1!4b1!4m5!3m4!1s0x4799db4975863803:0xd63ad8528f7c598c!8m2!3d48.7745353!4d9.174027" target="_blank">map</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="b-locations__left">
+                  <div class="b-locations__frame shown">
+                    <img class="b-locations__img" src="https://antoni.de/wp-content/uploads/2017/12/stut_office-1.jpg" alt="Stuttgart" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <footer class="footer">
+            <div class="container f">
+              <span class="left"> All rights reserved - <a href="https://antoni.de/impressum/">Impressum / Datenschutz</a>
+              </span>
+              <span class="right"> Join us on <a href="https://www.facebook.com/antonigmbh/" target="_blank">Facebook</a> and <a href="https://vimeo.com/user66718881" target="_blank">Vimeo</a>. </span>
+            </div>
+          </footer>
         </article>
       </main>
     </div>

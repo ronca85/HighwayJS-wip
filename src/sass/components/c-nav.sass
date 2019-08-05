@@ -1,0 +1,45 @@
+.c-nav
+	position: fixed
+	left: 0
+	top: 0
+	background: rgba(0,0,0,0.2)
+	height: 70px
+	width: 100%
+	z-index: 10
+	&__list
+		height: 100%
+		display: flex
+		justify-content: flex-end
+		align-items: flex-end
+	&__list-item
+		background: rgba(0,0,0,0.2)
+		&:last-of-type
+			.c-nav__link
+				margin-right: 0
+	&__link
+		color: #fff
+		font-size: 20px
+		line-height: 28px
+		display: block
+		padding: 32px 20px 10px
+		text-decoration: none
+		position: relative
+		&:hover
+			text-decoration: none
+		&:before
+			content: ""
+			display: flex
+			position: absolute
+			bottom: 10px
+			left: 20px
+			right: 0
+			width: calc(100% - 40px)
+			background: #fff
+			height: 1px
+			transition: transform .4s cubic-bezier(0.4, 0, 0.2, 1), opacity .4s cubic-bezier(0.4, 0, 0.2, 1)
+			transform: rotate3d(0, 0, 1, 5deg) translate3d(0, 6px, 0)
+			transform-origin: left top
+			opacity: 0
+		&:hover:before
+			transform: rotate3d(0, 0, 1, 0) translate3d(0, 0, 0)
+			opacity: 1

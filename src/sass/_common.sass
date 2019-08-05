@@ -1,6 +1,3 @@
-body
-	// +css-lock(16, 50, 600, 1000)
-	line-height: 1.4
 
 nav
 	font-size: 20px
@@ -12,19 +9,45 @@ nav
 	background: #fff
 
 h1
-	text-align: center
-	font-size: 100px
-	overflow: hidden
-	position: absolute
-	top: 50%
-	left: 50%
-	transform: translate(-50%, -50%)
-	color: #fff
-	font-size: 15vh
 	span
 		display: inline-block // we need this because gsap translates won't work without
 
-#container
+.container
+	width: calc(100% - 88px)
+	margin-left: 44px
+
+
+a, a:visited
+	color: #999
+	text-decoration: none
+	-webkit-tap-highlight-color: transparent
+	outline: none
+	transition: color 2s cubic-bezier(0.26, 1.04, 0.54, 1)
+
+// inline .contact .scrollable
+// position: fixed
+// will-change: transform
+// transform: translate3d(0px, 0px, 0px)
+
+.contact .scrollable
+	background: #fff
+
+.scrollable
+	top: 0
+	left: 0
+	z-index: 1
+	width: 100%
+	overflow: hidden
 	position: fixed
-	z-index: -1
+	will-change: transform
+	
+
+.main-overlay
+	position: fixed
+	z-index: 50
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: #000
 
